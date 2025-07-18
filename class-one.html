@@ -7,6 +7,8 @@
 
 <body>
     <form>
+        <fieldset>
+            <legend>Admission form for students</legend>
         <!--Form tag in html-->
         <!--personal information-->
         <label>Enter your First name:</label>
@@ -26,8 +28,18 @@
         <input type="number">
         <br />
         <br />
+        <label>Enter your date:</label>
+        <input type="date">
+        <br/>
+        <br/>
+        <label>Enter your date:</label>
+    <input type="datetime-local">
+        <br/>
+        <br/>
         <label>Enter your Address</label>
         <input type="text">
+        <br>
+        <br/>
         <!--input type radio-->
         <label> Gender:</label>
         <input type="radio" name="gender">
@@ -44,13 +56,53 @@
         <input type="checkbox"><label>cooking</label>
         <br />
         <br />
-        <input type="submit">
+        <!--select tag-->
+        <label for="course">select your course:</label>
+        <select name="courses" id="">
+            <option value="python">python</option>
+            <option value="c++">c++</option>
+            <option value="java">java</option>
+            <option value="c">c</option>
+            <option value="designing">designing</option>
+        </select>
+        <br>
+        </br>
+        <label for="course">select your course:</label>
+        <select name="courses" id="">
+            <optgroup label="backend">
+                <option value="python">python</option>
+                <option value="c++">c++</option>
+                <option value="java">java</option>
+                <option value="c">c</option>
+            </optgroup>
+
+            <optgroup label="frontend">
+                <option value="designing">designing</option>
+                <option value="c++">c++</option>
+                <option value="java">java</option>
+                <option value="web layouting">web layouting</option>
+            </optgroup>
+            <optgroup label="communication">
+                <option value="english">english</option>
+                <option value="softskills">softskills</option>
+                <option value="interview practice">interview practice</option>
+            </optgroup>
+        </select>
         <br/>
+        <br/>
+        <label for="communication"> Range your communication skills:</label>
+        <input type="range" name="communication">
+        <br/>
+        <br/>
+        <label for="volume"> Range of volume:</label>
+        <input type="range" name="volume" min="0" max="10">
+        <br/>
+        <br/>
+        <input type="submit">
+        <br />
         <label>password:</label>
         <input type="password">
-
-
-
+        </fieldset>
     </form>
 </body>
 
