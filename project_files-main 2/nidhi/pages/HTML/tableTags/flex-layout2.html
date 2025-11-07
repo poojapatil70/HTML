@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>flex-layout</title>
+    <style>
+        .main-box {
+            height: 100vh;
+            width: 100vw;
+            border: solid black;
+            margin: auto;
+        }
+
+        .top {
+            height: 20%;
+            width: 100%;
+            border: solid black;
+        }
+
+        .bottom {
+            height: 80%;
+            width: 100%;
+            border: solid black;
+            display: flex;
+        }
+
+        .bottom-left {
+            height: 100%;
+            width: 10%;
+            border: solid black;
+        }
+
+        .bottom-right {
+            height: 100%;
+            width: 90%;
+            border: solid black;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .r-top {
+            height: 33.33%;
+            width: 100%;
+            border: solid black;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .r-middle {
+            height: 33.33%;
+            width: 100%;
+            border: solid black;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .r-bottom {
+            height: 33.33%;
+            width: 100%;
+            border: solid black;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .bt-r-top-1 {
+            width: 33.3%;
+            height: 100%;
+            border: solid black ;
+        }
+        .bt-r-top-2 {
+            width: 33.3%;
+            height: 100%;
+            border: solid black;
+        }
+         .bt-r-top-3 {
+            width: 33.3%;
+            height: 100%;
+            border: solid black;
+        }
+        .bt-r-middle-1{
+            width: 66.6%;
+            height: 100%;
+            border: solid black;
+        }
+        .bt-r-middle-2{
+            width: 33.3%;
+            height: 100%;
+            border: solid black;
+        }
+        .bt-r-bottom-1{
+            width: 30%;
+            height: 100%;
+            border: solid black;
+        }
+        .bt-r-bottom-2{
+            width: 30%;
+            height: 100%;
+            border: solid black;
+        }
+        .bt-r-bottom-3{
+            width: 40%;
+            height: 100%;
+            border: solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-box">
+        <div class="top"></div>
+        <div class="bottom">
+            <div class="bottom-left"></div>
+            <div class="bottom-right">
+                <div class="r-top">
+                    <div class="bt-r-top-1"></div>
+                    <div class="bt-r-top-2"></div>
+                    <div class="bt-r-top-3"></div>
+                </div>
+                <div class="r-middle">
+                    <div class="bt-r-middle-1"></div>
+                    <div class="bt-r-middle-2"></div>
+
+                </div>
+                <div class="r-bottom">
+                    <div class="bt-r-bottom-1"></div>
+                    <div class="bt-r-bottom-2"></div>
+                    <div class="bt-r-bottom-3"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
