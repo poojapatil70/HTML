@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>flex layout</title>
+    <style>
+       .main-box{
+        width: 100vw;
+        height: 100vh;
+        border: solid black;
+        display: flex;
+        flex-direction: row;
+       }
+       .left{
+        width: 50%;
+        height: 100%;
+        border: solid black;
+        display: flex;
+        flex-direction: row;
+       }
+       .right{
+        width: 50%;
+        height: 100%;
+        border: solid black;
+       }
+       .l-row-1{
+        width: 33.3%;
+        height: 100%;
+        border: solid black;
+       }
+       .l-row-2{
+        width: 33.3%;
+        height: 100%;
+        border: solid black;
+       }
+       .l-row-3{
+        width: 33.3%;
+        height: 100%;
+        border: solid black;
+       }
+       .row-1-top{
+        width: 100%;
+        height: 40%;
+        border: solid black;
+       }
+       .row-1-middle{
+        width: 100%;
+        height: 20%;
+        border: solid black;
+       }
+       .row-1-bottom{
+        width: 100%;
+        height: 38%;
+        border: solid black;
+       }
+       .row-2-top{
+        width: 100%;
+        height: 70%;
+        border: solid black;
+       }
+       .row-2-bottom{
+        width: 100%;
+        height: 29%;
+        border: solid black;
+       }
+       .row-3-top{
+        width: 100%;
+        height: 30%;
+        border: solid black;
+       }
+       .row-3-middle{
+        width: 100%;
+        height: 30%;
+        border: solid black;
+       }
+       .row-3-bottom{
+        width: 100%;
+        height: 38%;
+        border: solid black;
+       }
+       .r-row-1{
+        width: 100%;
+        height: 33.3%;
+        border: solid black;
+       }
+       .r-row-2{
+        width: 100%;
+        height: 20%;
+        border: solid black;
+        display: flex;
+        flex-direction: row;
+       }
+       .r-row-3{
+        width: 100%;
+        height: 44%;
+        border: solid black;
+        display: flex;
+        flex-direction: row;
+       }
+       .box-one{
+        width: 50%;
+        height: 100%;
+        border: solid black;
+       }
+       .box-two{
+        width: 50%;
+        height: 100%;
+        border: solid black;
+       }
+       .bt-row-1{
+        width: 25%;
+        height: 100%;
+        border: solid black;
+       }
+       .bt-row-2{
+        width: 25%;
+        height: 100%;
+        border: solid black;
+       }
+       .bt-row-3{
+        width: 50%;
+        height: 100%;
+        border: solid black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       }
+        .box{
+            width: 40%;
+            height: 40%;
+            border: solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-box">
+       <div class="left">
+        <div class="l-row-1">
+            <div class="row-1-top"></div>
+            <div class="row-1-middle"></div>
+            <div class="row-1-bottom"></div>
+        </div>
+        <div class="l-row-2">
+            <div class="row-2-top"></div>
+            <div class="row-2-bottom"></div>
+        </div>
+        <div class="l-row-3">
+            <div class="row-3-top"></div>
+            <div class="row-3-middle"></div>
+            <div class="row-3-bottom"></div>
+        </div>
+        </div>
+       <div class="right">
+        <div class="r-row-1"></div>
+        <div class="r-row-2">
+            <div class="box-one"></div>
+            <div class="box-two"></div>
+        </div>
+        <div class="r-row-3">
+            <div class="bt-row-1"></div>
+            <div class="bt-row-2"></div>
+            <div class="bt-row-3">
+                <div class="box"></div>
+            </div>
+        </div>
+
+       </div>
+
+    </div>
+</body>
+</html>
