@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cake Library 🍰</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff5f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background: #ff6b81;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .search-box {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .search-box input {
+      padding: 10px;
+      width: 60%;
+      border: 2px solid #ff6b81;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .cake-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .cake-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .cake-card:hover {
+      transform: scale(1.03);
+    }
+
+    .cake-card img {
+      width: 100%;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .cake-card .info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .cake-card h3 {
+      margin: 0;
+      color: #ff6b81;
+    }
+
+    .cake-card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #ff6b81;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>🍰 Cake Library</header>
+  <div class="container">
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Search for a cake...">
+    </div>
+    <div class="cake-grid" id="cakeGrid"></div>
+  </div>
+  <footer>© 2025 Cake Library | Made with ❤️ using HTML, CSS & JS</footer>
+
+  <script>
+    const cakes = [
+      { name: 'Chocolate Truffle', description: 'Rich chocolate sponge layered with ganache.', image: 'https://images.unsplash.com/photo-1605478031298-9e5c22877b93?auto=format&fit=crop&w=800&q=60' },
+      { name: 'Red Velvet', description: 'Soft red sponge with cream cheese frosting.', image: 'https://images.unsplash.com/photo-1612198793751-e7eafcb07b5b?auto=format&fit=crop&w=800&q=60' },
+      { name: 'Strawberry Shortcake', description: 'Fluffy cake with whipped cream and strawberries.', image: 'https://images.unsplash.com/photo-1565958011705-44e211f07b2d?auto=format&fit=crop&w=800&q=60' },
+      { name: 'Lemon Drizzle', description: 'Zesty lemon cake topped with icing.', image: 'https://images.unsplash.com/photo-1599785209798-9d1a1c4d3f32?auto=format&fit=crop&w=800&q=60' },
+      { name: 'Black Forest', description: 'Chocolate cake with cherries and whipped cream.', image: 'https://images.unsplash.com/photo-1630396593151-fb71ae63e86b?auto=format&fit=crop&w=800&q=60' },
+      { name: 'Vanilla Dream', description: 'Classic vanilla sponge with buttercream.', image: 'https://images.unsplash.com/photo-1604667644899-7a64e0cf0bef?auto=format&fit=crop&w=800&q=60' }
+    ];
+
+    const cakeGrid = document.getElementById('cakeGrid');
+
+    function displayCakes(list) {
+      cakeGrid.innerHTML = list.map(cake => `
+        <div class="cake-card">
+          <img src="${cake.image}" alt="${cake.name}">
+          <div class="info">
+            <h3>${cake.name}</h3>
+            <p>${cake.description}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    displayCakes(cakes);
+
+    document.getElementById('search').addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase();
+      const filtered = cakes.filter(cake => cake.name.toLowerCase().includes(term));
+      displayCakes(filtered);
+    });
+  </script>
+</body>
+</html>
