@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="height"> 
+    <input type="number" id="weight"> 
+    <button onclick="mybmi()">calculate</button>
+    <h3 id="result"></h3>
+    <script>
+        function mybmi(){
+        let userweight = Number(document.getElementById("weight").value);
+        let userheight = Number(document.getElementById("height").value);
+        let heightsquare = userheight * userheight; 
+        let bmi = userweight / heightsqare;
+
+       alert("your BMI index id:" + bmi)
+       document.getElementById("result").innerHTML = "your BMI index id: "+bmi
+        }
+        
+    </script>
+</body>
+</html>
