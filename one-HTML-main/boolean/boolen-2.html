@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Number comparison</h1>
+    <p id="display"></p>
+    <input type="number" id="input-1">
+    <input type="number" id="input-2">
+    <button onclick="input()">Submit</button>
+</body>
+<script>
+    function input() {
+        let a = document.getElementById("input-1").value;
+        let b = document.getElementById("input-2").value;
+        let c = a > b
+        alert(c)
+    }
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Curent Balence</h3>
+    <h3 id="display"></h3>
+    <input type="number" id="input" placeholder="">
+    <input type="number" id="input" placeholder="">
+
+    <button onclick="myFunction()">add-button</button>
+    <button onclick="myFunctionTwo()">subtract button</button>
+    <button onclick="myFunctionthree">multiply button</button>
+    <script>
+        let sparsh =0
+        
+        document.getElementById("display").innerHTML=sparsh;
+        function myFunction(){
+            let kartik=document.getElementById("input").value;
+            sparsh=sparsh+Number(kartik)
+            document.getElementById("display").innerHTML=sparsh;
+        }
+
+
+        let  krish=1000
+        document.getElementById("display").innerHTML=krish;
+       
+        function myFunctionTwo(){
+
+        let parth=    document.getElementById("input").value;
+        krish=krish - Number(parth)
+        document.getElementById("display").innerHTML=krish;
+        }
+        function myFunctionthree(){
+            let parth=document.getElementById("input").value;
+            krish = krish * number(parth)
+        }
+        function myFunctionfour(){
+            
+        }
+
+       </script>
+</body>
+
+</html>

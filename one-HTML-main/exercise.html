@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cointainer{
+width: 50%;
+height: 50%;
+background-color: orange;
+display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .display-area{
+            width: 90%;
+            height: 20%;
+            background-color: black;
+        }
+        .input-area{
+width: 90%;
+height: 20%;
+background-color: yellow;
+        }
+        .button-area{
+width: 90%;
+height: 20%;
+background-color: pink;
+        }
+        button{
+            font-size: xx-large;
+            background-color: black;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="cointainer">
+        <div class="display-area"></div>
+        <br>
+        <br>
+        <br>
+        <div class="input-area">
+            <input type="number" id="input-one" placeholder="input one">
+                   <input type="number" id="input-two" placeholder="Input two">
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="button-area">
+            <button onclick="functionone()">red </button>
+            <button onclick="functiontwo()">yellow</button>
+        </div>
+    </div>
+    <script>
+        function functionone(){
+ let a = document.getElementById("input-one").value;
+  console.log(a)
+        }
+        let b = 0
+        function functiontwo(){
+ let a = document.getElementById("input-two").value;
+
+b= b+a
+   console.log(a)
+        }
+    </script>
+</body>
+</html>

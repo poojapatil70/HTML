@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ATM Withdrawal </title>
+
+    <style>
+        body {
+            background: lightblue;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .box {
+            background: white;
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .balance {
+            background: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin-top: 10px;
+        }
+
+        button {
+            width: 95%;
+            padding: 10px;
+            margin-top: 10px;
+            background: #0277bd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .message {
+            background: #d4f5d4;
+            padding: 10px;
+            margin-top: 10px;
+           
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>ATM Withdrawal</h2>
+
+        <div class="balance">
+            <p>Current Balance</p>
+            <h3 id="balance">₹9500</h3>
+        </div>
+
+        <input id="amount" type="number" placeholder="Enter amount">
+
+        <button onclick="withdraw()">Withdraw</button>
+
+        <div class="message" id="msg">Withdrawal Successful</div>
+    </div>
+
+
+</body>
+
+<script>
+    let balance = 9500;
+
+    function withdraw() {
+        let amt = Number(document.getElementById("amount").value);
+        let msg = document.getElementById("msg");
+
+      
+        
+        (amt > 0)  (
+            balance -= amt,
+            document.getElementById("balance").innerText = "₹" + balance,
+            msg.style.display = "block",
+            setTimeout(() => msg.style.display = "none", 2000)
+        );
+    }
+</script>
+</html>

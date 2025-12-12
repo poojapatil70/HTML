@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="input-1">
+    <button onclick="inputThree()">submit</button>
+    <p id="display"></p>
+    <script>
+        function input() {
+            let number = document.getElementById("input-1").value;
+            document.getElementById("display").innerHTML = number;
+        }
+        function inputtwo() {
+            let number = prompt(" enter a number:")
+            document.getElementById("display").innerHTML = number;
+        }
+      function inputThree(){
+        let number = 10;
+        document.getElementById("display").innerHTML = number;
+      }
+    </script>
+</body>
+
+</html>
