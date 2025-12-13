@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 40%;
+            height: 40%;
+            background-color: beige;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .display-area{
+            width: 80%;
+            height: 40%;
+            border-radius: 20px;
+            background-color: gray;
+            padding: 20px;
+        }
+        .button-grp{
+            width: 80%;
+            height: 100%;
+            border-radius: 20px;            
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+        p{
+            font-size: 30px;
+            color: aliceblue;
+            font-weight: 600;
+            margin: 20px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        button{
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            font-size: 30px;
+            font-weight: 700;
+          
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="display-area">
+            <p id="display"></p>
+        </div>
+        <div class="button-grp">
+            <button onclick="clickOne()">1</button>
+            <button onclick="clickTwo()">2</button>
+            <button onclick="clickThree()">3</button>
+            <button onclick="clickFour()">4</button>
+            <button onclick="clickFive()">5</button>
+            <button onclick="clickSix()">6</button>
+            <button onclick="clickSeven()">6</button>
+        </div>
+    </div>
+    <script>
+        function clickOne(){
+            document.getElementById("display").innerHTML += 1
+        }
+         function clickTwo(){
+            document.getElementById("display").innerHTML += 2
+        }
+         function clickThree(){
+            document.getElementById("display").innerHTML += 3
+        }
+         function clickFour(){
+            document.getElementById("display").innerHTML += 4
+        }
+        function clickFive(){
+            document.getElementById("display").innerHTML += 5
+        }
+        function clickSix(){
+            document.getElementById("display").innerHTML += 6
+        }
+        function clickSeven(){
+            document.getElementById("display").innerHTML += 7
+        }
+
+    </script>
+</body>
+</html>
