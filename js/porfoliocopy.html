@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pooja Patil — Portfolio</title>
+  <meta name="description" content="Personal portfolio showcasing projects, skills and contact info." />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#8b5cf6;--muted:#9aa6b2;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#071026 0%,#071827 100%);color:#e6eef8}
+    a{color:inherit}
+    header{position:sticky;top:0;backdrop-filter:blur(6px);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;z-index:40}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:grid;place-items:center;font-weight:800}
+    nav{display:flex;gap:12px}
+    nav a{padding:8px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:#fff}
+    .container{max-width:1100px;margin:36px auto;padding:0 20px}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center}
+    .intro h1{font-size:clamp(26px,4vw,40px);margin:0 0 8px}
+    .intro p{color:var(--muted);margin:0 0 16px}
+    .cta{display:flex;gap:10px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:0;font-weight:700;text-decoration:none}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+
+    .skills{display:flex;gap:10px;flex-wrap:wrap}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:999px;font-weight:700;color:var(--muted)}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:12px}
+    .project{overflow:hidden;border-radius:12px}
+    .project img{width:100%;height:160px;object-fit:cover;display:block}
+    .project .meta{padding:12px}
+    .project h4{margin:0 0 6px}
+    .project p{margin:0;color:var(--muted);font-size:0.95rem}
+
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+    footer{text-align:center;padding:20px;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      nav{display:none}
+      .about{grid-template-columns:1fr}
+    }
+
+    /* subtle animations */
+    .fade{opacity:0;transform:translateY(10px);animation:fadeIn .6s forwards}
+    @keyframes fadeIn{to{opacity:1;transform:none}}
+
+    /* contact form */
+    form{display:grid;gap:8px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    button[type=submit]{padding:10px;border-radius:8px;border:0;background:var(--accent);color:#fff;font-weight:700}
+
+    .nav-right{display:flex;gap:8px;align-items:center}
+    .chip{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px;font-weight:700;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">PP</div>
+      <div>
+        <div style="font-weight:800">Pooja Patil</div>
+        <div style="font-size:12px;color:var(--muted)">Front-end Developer • Designer</div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-right">
+      <div class="chip" id="localTime">--:--</div>
+      <button class="chip" id="downloadResume">Download Resume</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="intro card fade" style="padding:28px">
+        <h1>Hi — I'm Pooja. I build clean, accessible web interfaces.</h1>
+        <p class="muted">I specialise in responsive front-end development, interactive UI, and polished design. I love turning ideas into delightful user experiences.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">See projects</a>
+          <a class="btn ghost" href="#contact">Hire me</a>
+        </div>
+
+        <div style="margin-top:18px">
+          <h3 style="margin:0 0 8px">Featured skills</h3>
+          <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">UX</div>
+            <div class="skill">Responsive</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card fade" style="padding:18px;display:flex;flex-direction:column;gap:12px;align-items:center">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=60" alt="profile" style="width:160px;height:160px;border-radius:12px;object-fit:cover">
+        <div style="text-align:center">
+          <div style="font-weight:800">Pooja Patil</div>
+          <div style="color:var(--muted);font-size:0.95rem">Front-end Developer</div>
+        </div>
+        <div style="width:100%">
+          <div style="display:flex;justify-content:space-between;color:var(--muted);font-weight:700"><span>Experience</span><span>3 yrs</span></div>
+          <div style="display:flex;justify-content:space-between;color:var(--muted);font-weight:700;margin-top:6px"><span>Location</span><span>Mumbai, India</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" style="margin-top:28px">
+      <div class="card about fade" style="padding:18px">
+        <div>
+          <h2>About me</h2>
+          <p class="muted">I'm a front-end developer who enjoys crafting accessible, performant interfaces. I work across the full front-end stack — HTML, modern CSS, and JavaScript — and I love collaborating with product teams to ship delightful features.</p>
+          <p class="muted">When I'm not coding I tinker with UI micro-interactions, take photos, and bake (cookies!).</p>
+        </div>
+        <div>
+          <h3>Quick facts</h3>
+          <ul style="color:var(--muted);padding-left:18px;margin-top:6px">
+            <li>Available for freelance & full-time</li>
+            <li>Comfortable with Git, npm, and build tools</li>
+            <li>Strong eye for visual design and accessibility</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" style="margin-top:28px">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="project card">
+          <img src="https://images.unsplash.com/photo-1523475496153-3c0f45a1b2b7?auto=format&fit=crop&w=800&q=60" alt="Project A">
+          <div class="meta">
+            <h4>Project A — Recipe Finder</h4>
+            <p class="muted">Searchable recipe app using a public API; features saved favorites and responsive layout.</p>
+            <div style="margin-top:8px;display:flex;gap:8px">
+              <a class="btn" href="#">Live</a>
+              <a class="btn ghost" href="#">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card">
+          <img src="https://images.unsplash.com/photo-1505765052459-2f25f2b8b0f2?auto=format&fit=crop&w=800&q=60" alt="Project B">
+          <div class="meta">
+            <h4>Project B — Portfolio CMS</h4>
+            <p class="muted">A lightweight CMS for managing project entries; built with static site generation in mind.</p>
+            <div style="margin-top:8px;display:flex;gap:8px">
+              <a class="btn" href="#">Live</a>
+              <a class="btn ghost" href="#">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=60" alt="Project C">
+          <div class="meta">
+            <h4>Project C — UI Component Library</h4>
+            <p class="muted">A set of accessible, reusable UI components with documentation and examples.</p>
+            <div style="margin-top:8px;display:flex;gap:8px">
+              <a class="btn" href="#">Live</a>
+              <a class="btn ghost" href="#">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" style="margin-top:28px">
+      <h2>Skills</h2>
+      <div class="card" style="padding:16px">
+        <div style="display:flex;gap:20px;flex-wrap:wrap">
+          <div style="flex:1;min-width:220px">
+            <h4 style="margin:0 0 8px">Development</h4>
+            <div class="muted">HTML, CSS, JavaScript, React, TypeScript, Git</div>
+          </div>
+          <div style="flex:1;min-width:220px">
+            <h4 style="margin:0 0 8px">Design & UX</h4>
+            <div class="muted">Figma, Prototyping, Accessibility, Motion</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <h2>Contact</h2>
+      <div class="card" style="padding:16px">
+        <form id="contactForm">
+          <label for="name">Name</label>
+          <input id="name" name="name" required placeholder="Your name">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project"></textarea>
+
+          <div style="display:flex;gap:12px;align-items:center;margin-top:8px">
+            <button type="submit">Send message</button>
+            <div id="formStatus" style="color:var(--muted);font-weight:700"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="muted">© 2025 Pooja Patil • Built with HTML, CSS & JS</div>
+  </footer>
+
+  <script>
+    // local time in header
+    function updateTime(){
+      const el=document.getElementById('localTime');
+      const now=new Date();
+      el.textContent = now.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+    }
+    setInterval(updateTime,1000);
+    updateTime();
+
+    // smooth scroll for anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const href=a.getAttribute('href');
+        if(href.startsWith('#')){
+          e.preventDefault();
+          const id=href.slice(1);
+          const target=document.getElementById(id);
+          if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      });
+    });
+
+    // simple contact form validation + fake send
+    const form=document.getElementById('contactForm');
+    const status=document.getElementById('formStatus');
+    form.addEventListener('submit',e=>{
+      e.preventDefault();
+      status.textContent='Validating...';
+      const name=form.name.value.trim();
+      const email=form.email.value.trim();
+      const msg=form.message.value.trim();
+      if(name.length<2){ status.textContent='Enter your name'; return; }
+      if(!email.includes('@')){ status.textContent='Enter a valid email'; return; }
+      if(msg.length<10){ status.textContent='Message too short'; return; }
+      status.textContent='Sending...';
+      setTimeout(()=>{ status.textContent='Message sent! I will reply soon.'; form.reset(); },900);
+    });
+
+    // download a simple resume (generated on the fly)
+    document.getElementById('downloadResume').addEventListener('click',()=>{
+      const resumeText = `Pooja Patil\nFront-end Developer\n\nExperience:\n- Front-end development (3 yrs)\n- React, JavaScript, HTML, CSS\n\nContact: you@example.com`;
+      const blob = new Blob([resumeText], {type: 'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'Pooja_Patil_Resume.txt';
+      document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>

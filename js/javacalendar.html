@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--goggle font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            font-size: 60px;
+            margin-left: 10%;
+            font-family: "Changa One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .container-one{
+            width: 100%;
+            height: 70%;
+            flex-direction: column;
+        } 
+        .container-one{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            background-color: beige;
+            margin-top: 10px;
+        } 
+        .container{
+            width: 100%;
+            height: 100%;
+           
+        }
+        .container-two{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            background-color: aquamarine;
+            padding-top: 20px;
+            
+        } 
+        button{
+            width: 200px;
+            height: 100px;
+            background-color: rgb(226, 116, 153);
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 20px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+    </style>
+</body>
+<div class="container">
+    <div class="container-one" id="container-one">
+    <p>Welcome to Universal Calendar</p>
+    <p id="display"></p>
+    </div>
+   
+    <div class="container-two" id="container-two">
+        <button onclick="sunday()" id ="sunday">Sunday</button>
+         <button onclick="monday()" id ="monday">Monday</button>
+         <button onclick="tuesday()" id ="tuesday">Tuesday</button>
+         <button onclick="wednesday()" id ="wednesday">Wednesday</button>
+         <button onclick="thrusday()" id ="thrusday">Thrusday</button>
+         <button onclick="friday()" id ="friday">Friday</button>
+         <button onclick="saturday()" id ="saturday">Saturday</button>
+    </div>
+</div>
+<script>
+    function sunday(){
+        document.getElementById("container-one").style.backgroundColor = "#9BB4C0";
+        document.getElementById("container-two").style.backgroundColor = "#8FABD4";
+        document.getElementById("sunday").style.backgroundColor = "#53629E";
+       document.getElementById("display").innerHTML="Today is Sunday!";
+    }
+    function monday(){
+        document.getElementById("container-one").style.backgroundColor = "#FFE797";
+        document.getElementById("container-two").style.backgroundColor = "#8FABD4";
+        document.getElementById("monday").style.backgroundColor = "#FF8040";
+       document.getElementById("display").innerHTML="Today is Monday!";
+    }
+    function tuesday(){
+        document.getElementById("container-one").style.backgroundColor = "#9BB4C0";
+        document.getElementById("container-two").style.backgroundColor = "#8FABD4";
+        document.getElementById("tuesday").style.backgroundColor = "#FFF8D4";
+       document.getElementById("display").innerHTML="Today is Tuesday!";
+    }
+    function wednesday(){
+        document.getElementById("container-one").style.backgroundColor = "#9BB4C0";
+        document.getElementById("container-two").style.backgroundColor = "#8FABD4";
+        document.getElementById("wednesday").style.backgroundColor = "#A3B087";
+       document.getElementById("display").innerHTML="Today is Wednesday!";
+    }
+    function thrusday(){
+        document.getElementById("container-one").style.backgroundColor = "#9BB4C0";
+        document.getElementById("container-two").style.backgroundColor = "#8FABD4";
+        document.getElementById("thrusday").style.backgroundColor = "#A8BBA3";
+       document.getElementById("display").innerHTML="Today is Thrusday!";
+    }
+    function friday(){
+        document.getElementById("container-one").style.backgroundColor = "#9BB4C0";
+        document.getElementById("container-two").style.backgroundColor = "#8FABD4";
+        document.getElementById("friday").style.backgroundColor = "#B7E5CD";
+       document.getElementById("display").innerHTML="Today is Friday!";
+    }
+    function saturday(){
+        document.getElementById("container-one").style.backgroundColor = "#9BB4C0";
+        document.getElementById("container-two").style.backgroundColor = "#8FABD4";
+        document.getElementById("saturday").style.backgroundColor = "#1D546C";
+       document.getElementById("display").innerHTML="Today is Saturday!";
+    }
+</script>
+</html>

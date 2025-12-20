@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+<title>console</title>
+
+<body>
+    <p id="display"></p>
+    <p id="display2"></p>
+    <button oneClick="getMoney()"> get a money</button>
+    <script>
+        
+             let amount= 1000
+             document.getElementById("display").innerHTML = amount
+             let account=0
+             function getMoney(){
+                amount = promopt("Enter amount")
+                account = account + Number(account)
+                document.getElementById("display2").innerHTML = amount
+             }
+    </script>
+    </body>
+</html>

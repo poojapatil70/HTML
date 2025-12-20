@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        
+          
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+              display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .display-area {
+            width: 50%;
+            height: 60%;
+            background-color: rgb(225, 151, 204);
+             display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        
+        }
+
+        .input-area {
+            width: 90%;
+            height: 20%;
+            background-color: rgb(148, 180, 59);
+        }
+         .header{
+            width: 90%;
+            height: 30%;
+            background-color: rgb(218, 122, 136);
+        }
+        .button-area {
+            width: 90%;
+            height: 20%;
+            background-color: rgb(160, 155, 205);
+        }
+        button{
+            height: 30%;
+            width: 30%;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="display-area">
+            <div class="header"></div>
+            <div class="input-area">
+                <input type="number" id="input-one" placeholder="input-one">
+                <input type="number" id="input-two" placeholder="input-two">
+            </div>
+            <div class="button-area">
+                <button onClick="functionOne()">Red</button>
+                <button onClick="functionTwo()">Green</button>
+                
+
+            </div>
+
+        </div>
+    </div>
+    <script>
+
+        function functionOne(){
+            
+            let a = document.getElementById("input-one").value;
+            console.log(a)
+            
+
+        }
+        let b = 0
+        function functionTwo(){
+             let a = document.getElementById("input-two").value;
+             console.log(a)
+             
+             b= b+Number(a)
+             console.log(b)
+
+
+        }
+    </script>
+</body>
+
+</html>
