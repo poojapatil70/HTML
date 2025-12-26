@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIZZA MENU</title>
+</head>
+
+<body>
+    <h1>Pizza Menu</h1>
+    <script>
+        function exampleTwo() {
+            let marks = prompt("Enter a marks")
+            let box = ""
+
+            switch (true) {
+                case marks <= 150:
+                    box = "small pizza"
+                    break;
+
+                case marks <= 250:
+                    box = "medium pizza"
+                    break;
+
+                case marks <= 350:
+                    box = "large pizza"
+                    break;
+
+
+                default:
+                    box = "Sorry not found"
+
+
+            }
+            alert(box)
+
+
+        }
+        exampleTwo()
+
+    </script>
+
+</body>
+
+</html>
