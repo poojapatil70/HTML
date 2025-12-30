@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+        scroll-behavior: smooth;
+        
+    }
+    .main-container{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        background-color: lightcoral;
+        gap: 10px;
+        position: relative;
+
+    }
+    .box-one{
+        height: 150px;
+        width: 200px;
+        border: solid black 1px;
+        background-color: rgb(181, 64, 192);
+        position:absolute;
+        top: 0px;
+        left: 100px;
+
+    }
+    .box-two{
+        height: 150px;
+        width: 200px;
+        border: solid black 1px;
+        background-color: rgb(236, 231, 83);
+
+
+    }
+    .box-three , .box-four , .box-five ,.box-six{
+        height: 150px;
+        width: 200px;
+        border: solid black 1px;
+        background-color: aqua;
+
+    }
+    .header{
+        height: 150px;
+        width: 700px;
+        border: solid black 1px;
+        background-color: rgb(222, 128, 66);
+
+    }
+
+</style>
+
+
+<body>
+    <div class="main-container">
+        <div class="box-one">
+            <div class="header">home</div>
+            <div class="header"><a href="#projects-section"></a> project</div>
+            <div class="header"><a href="#skills"></a>skills</div>
+            <div class="header"><a href="#contact"></a>contact</div>
+        </div>
+
+        <div class="box-one">1</div>
+        <div class="box-two">2</div>
+        <div class="box-three" id="skills"> skills</div>
+        <div class="box-four" id="contact"> contact</div>
+        <div class="box-five" id="project-section">project-section</div>
+        <div class="box-six">6</div>
+        <div class="box-seven">7</div>
+        
+
+
+    </div>
+    
+</body>
+</html>
