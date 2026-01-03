@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="display-1"></p>
+    <p id="display-2"></p>
+    <p id="display-3"></p>
+    <p id="display-4"></p>
+    <script>
+        let n = prompt()
+       if(n % 2 == 0){
+             let i = 1
+            while(i <= 10){
+                 n = Number(n)
+                document.getElementById("display-1").innerHTML += n + "x" + i + "=" + n * i +"<br/>";
+                i++;
+
+            }
+            while(i <= 10){
+                n = Number(n)
+                document.getElementById("display-2").innerHTML += (n+2)  + "x" + i + "=" + (n+2) * i +"<br/>";
+                i++;
+
+            }
+            i=1
+            while(i <= 10){
+                n = Number(n)
+                document.getElementById("display-3").innerHTML += (n+4) + "x" + i + "=" + (n+4) * i +"<br/>";
+                i++;
+
+            }
+            i=1
+            while(i <= 10){
+                n = Number(n)
+                document.getElementById("display-4").innerHTML += (n+6) + "x" + i + "=" + (n+6) * i +"<br/>";
+                i++;
+
+            }
+           
+        }
+        
+        
+    </script>
+    
+</body>
+</html>
