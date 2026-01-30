@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body {
+      margin: 0;
+      
+    }
+
+    /* Main layout: 3 columns */
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .column {
+      flex: 1;
+      padding: 10px;
+      display: flex;
+      flex-direction: column; /* rows inside */
+      gap: 10px;
+    }
+
+    .col-1 { background: #f8d7da; }
+    .col-2 { background: #d1ecf1; }
+    .col-3 { background: #d4edda; }
+
+    /* Rows */
+    .row {
+      flex: 1;
+      background: white;
+      border: 1px solid;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="column col-1">
+      <div class="row">Row 1</div>
+      <div class="row cross">Cross Row</div>
+      
+      <div class="row">Row 3</div>
+    </div>
+
+    <div class="column col-2">
+      
+      <div class="row">Row 2</div>
+      <div class="row cross">Cross Row</div>
+    </div>
+
+    <div class="column col-3">
+      
+      <div class="row">Row 2</div>
+      <div class="row">Row 3</div>
+    </div>
+  </div>
+</body>
+</html>
+
+
