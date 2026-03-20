@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <style>
+        .main {
+            height: 50vw;
+            width: 50vw;
+          border: solid 2px;
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          grid-template-rows: repeat(6, 1fr)  ;
+        }
+        .one{
+            height: 100%;
+            width: 100%;
+            border: 1px solid;
+            
+        }
+        .col-span-three{
+            
+            grid-column: span 3;
+            
+          
+        }
+        .col-span-two{
+            grid-column: span 2;
+        }
+        .row-span-two{
+            grid-row: span 2;
+        }
+        .col-span-four{
+             grid-column: span 4;
+        }
+    </style>
+    <div class="main">
+       
+        <div class="one col-span-two row-span-two">1</div>
+        <div class="one col-span-two row-span-two">2</div>
+        <div class="one col-span-two row-span-two">1</div>
+        <div class="one col-span-three row-span-two">1</div>
+        <div class="one col-span-three row-span-two">1</div>
+        <div class="one col-span-two row-span-two">1</div>
+        <div class="one col-span-four">1</div>
+        <div class="one col-span-four"></div>
+        
+        
+    </div>
+    
+</body>
+</html>

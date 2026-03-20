@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .main {
+            height: 50vw;
+            width: 50vw;
+            border: solid 2px;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+        }
+
+        .one {
+            height: 100%;
+            width: 100%;
+            border: 1px solid;
+
+        }
+        .col-span-two {
+            grid-column: span 2;
+        }
+        .col-span-three{
+            grid-column: span 3;
+        }
+        .col-span-four {
+            grid-column: span 4;
+        }
+        .col-span-five {
+            grid-column: span 5;
+        }
+        .row-span-two {
+            grid-row: span 2;
+        }
+        .row-span-four {
+            grid-row: span 4;
+        }
+        .row-span-three {
+            grid-row: span 3;
+        }
+        .row-span-six{
+            grid-row: span 6;
+        }
+        
+    </style>
+    <div class="main">
+
+        <div class="one col-span-two row-span-two  ">1</div>
+        <div class="one col-span-two ">2</div>
+        <div class="one ">3</div>
+        
+        <div class="one  ">4</div>
+        <div class=" one col-span-two ">5</div>
+        <div class="one  col-span-two">6</div>
+    <div class="one  row-span-six col-span-two ">7</div>
+    <div class="one col-span-two row-span-two ">8</div>
+    <div class="one col-span-four row-span-two ">9</div>
+    <div class="one col-span-two row-span-two">10</div>
+    <div class="one col-span-two row-span-three">11</div>
+    <div class="one col-span-two row-span-two">12</div>
+    <div class="one  row-span-two">13</div>
+    <div class="one  row-span-two">14</div>
+
+
+       
+
+
+    </div>
+
+</body>
+
+</html>

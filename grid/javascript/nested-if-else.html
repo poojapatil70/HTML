@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Electricity Bill</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f4;
+    }
+
+    .container {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .input-one {
+      padding: 8px;
+      margin: 10px 0;
+      width: 120px;
+    }
+    .input-one {
+      padding: 8px;
+      margin: 10px 0;
+      width: 120px;
+    }
+
+    button {
+      padding: 8px 15px;
+      cursor: pointer;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+    }
+
+    #display {
+      margin-top: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h2>Electricity Bill</h2>
+
+      <input type="text" id="input-one" class="input-one" placeholder="Enter unit consumed">
+      <br>
+      <input type="text" id="input-two" class="input-two" placeholder="Enter days">
+      <br>
+      <button onclick="electricunit()">Bill</button>
+      <div class="button" id="display"></div>
+  </div>
+
+  <script>
+    function electricunit() {
+      let unit = Number(document.getElementById("input-one").value);
+      let days = document.getElementById("input-two").value;
+
+      if (unit <= 50) {
+        let newBill = unit * 8;
+        document.getElementById("display").innerHTML = "bill" + newBill ;
+
+        if( days > 180 ){
+          let lateFee = 1000;
+          let totalBill = Number (newBill + lateFee)
+          document.getElementById("display").innerHTML = "bill with late fees " +totalBill + "And your electricity has been cut";
+
+        }
+         else if( days>90 ){
+          let lateFee = 500;
+          let totalBill = newBill + lateFee
+          document.getElementById("display").innerHTML = "bill with late fees" + totalBill;
+
+        }
+       else if( days>50 ){
+          let lateFee = 200;
+          let totalBill = newBill + lateFee
+          document.getElementById("display").innerHTML = "bill with late fees" +totalBill;
+      }
+      else if( days>20 ){
+          let lateFee = 100;
+          let totalBill = newBill + lateFee
+          document.getElementById("display").innerHTML = "bill with late fees" +totalBill;
+      }
+
+      else if (unit <= 150) {
+        let newBill = 50 * 8 + (unit - 50) * 10
+        document.getElementById("display").innerHTML = "bill" + newBill + newBill*0.05;
+
+        if( days>20 ){
+          let lateFee = 50;
+          let totalBill = newBill + lateFee
+          document.getElementById("display").innerHTML = "bill with late fees " +totalBill;
+
+        }
+        if( days>50 ){
+          let lateFee = 200;
+          let totalBill = newBill + lateFee
+          document.getElementById("display").innerHTML = "bill with late fees" +totalBill;
+
+        }
+      }
+      else if (unit <= 250) {
+        let newBill = 508 + 100 * 10 + (unit - 150) * 12;
+        document.getElementById("display").innerHTML = "bill" + newBill+ newBill*0.1;
+        if( days>20 ){
+          let lateFee = 50;
+          let totalBill = newBill + lateFee
+          document.getElementById("display").innerHTML = "bill with late fees " +totalBill;
+
+        }
+        if( days>50 ){
+          let lateFee = 200;
+          let totalBill = newBill + lateFee
+          document.getElementById("display").innerHTML = "bill with late fees" +totalBill;
+
+        }
+      } 
+      else {
+        let newBill = 50 * 8  + 100 * 10 + 100 * 12 + 10015 + (unit - 250) * 20;
+        let surplus = Number(newBill * 0.02);
+        let totalBill = newBill + surplus
+        document.getElementById("display").innerHTML = newBill + newBill * 0.3
+
+      }
+
+    }
+  }
+  </script>
+</body>
+
+</html>
