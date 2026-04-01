@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> inline and internal css </title>
+    </head>
+    <body style="background-color: rgb(212, 163, 171);">
+        <form>
+            <fieldset>
+                             <!-- INLINE CSS STYLE -->
+                              
+            <legend style="color: rgb(77, 17, 95); font-size: 50px;">Image and Table</legend></h1>
+        
+        </form>
+            <br />
+        <h1 style="color: red; font-size: 50px;"> My styling page</h1>
+        <br/>
+            <u style="color: rgb(85, 85, 151);">first cute puppy</u>
+            <u style="color: rgb(213, 83, 126);">second cute puppy</u>
+            <br/>
+            <!--image-->
+            <br/>
+            <img src="../../images/1img.jpeg" style="height: 200px; width: 400px;">
+            <br/>
+            <br/>
+            <!--table form with styling-->
+            <table border="2">
+                <caption style="color: white; font-size: 50px;">Table No.1 Student's Information</caption>
+                <tr>
+                    <th colspan="2" style="background-color: yellowgreen;">Sr.No/Roll No.</th>
+                    <th style="background-color: yellowgreen;">Student name </th>
+                    <th rowspan="5" style="background-color: yellowgreen;">Subjects</th>
+                    <th style="background-color: yellowgreen;"></th>
+                    <th style="background-color: yellowgreen;"> Obtained Marks</th>
+                    <th style="background-color: yellowgreen;">Pass/Fail</th>
+                    <th style="background-color: yellowgreen;">PhotoId</th>
+                </tr>
+                <tr>
+                    <td style="background-color: white;" style="color: red;">1</td>
+                    <td style="background-color: white; " >001</td>
+                    <td style="background-color: white;">Sanket </td>
+                    <td style="background-color: white;" >English
+                        Hindi
+                        Marathi
+                    </td>
+                    <td style="background-color: white;">73
+                        81
+                        79
+                    </td>
+                    <td style="background-color: white;">Pass</td>
+                    <td style="background-color: white;">photo</td>
+                <tr>
+        
+                    <td style="background-color: white;">2</td>
+                    <td style="background-color: white;">002</td>
+                    <td style="background-color: white;">Diksha</td>
+                    <td style="background-color: white;">English
+                        Hindi
+                        Marathi</td>
+                    <td style="background-color: white;">45
+                        87
+                        77
+                    </td>
+                    <td style="background-color: white;">fail</td>
+                    <td style="background-color: white;">Photo</td>
+                </tr>
+                <tr>
+                    <td style="background-color: white;">3</td>
+                    <td style="background-color: white;">003</td>
+                    <td style="background-color: white;">Samiksha</td>
+        
+                    <td style="background-color: white;">English
+                        Hindi
+                        Marathi</td>
+                    <td style="background-color: white;">45
+                        87
+                        77</th>
+                    <td style="background-color: white;">pass</td>
+                    <td style="background-color: white;">photo</td>
+                </tr>
+                <tr>
+                    <td style="background-color: white;">4</td>
+                    <td style="background-color: white;">004</td>
+                    <td style="background-color: white;">Nukuk</td>
+        
+                    <td style="background-color: white;"> English
+                        Hindi
+                        Marathi</td>
+                    <td style="background-color: white;">45
+                        87
+                        77</td>
+                    <td style="background-color: white;">fail</td>
+                    <td style="background-color: white;"> photo</td>
+                </tr>
+                <tr>
+                    <td style="background-color: yellow;">total Passed</td>
+                    <td style="background-color: yellow;">-</td>
+                    <td style="background-color: yellow;">-</td>
+                    <td style="background-color: yellow;"> -</th>
+                    <td style="background-color: yellow;">2</td>
+                    <td style="background-color: yellow;">-</td>
+                    <td style="background-color: yellow;"></td>
+                    <td style="background-color: yellow;"></td>
+
+                    
+                    <img src="../../images/2img.jpeg" style="height: 200px; width: 400px;">
+        
+                </fieldset>
+    </body>
+</html>
+<br>
+</br>
+</br>
+ 
+                          <!--INTERNAL CSS STYLE-->
+
+
+   
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> inline and internal css </title>
+        <style>
+             .box-one{
+                    border:solid 1px black;
+                    background-color: rgb(116, 224, 100);
+                }
+                 .box-two{
+                    border:solid 1px black;
+                    background-color: rgb(249, 245, 247);
+                }
+                 .box-three{
+                    border:solid 1px black;
+                    background-color:yellow;
+                }
+        </style>
+    </head>
+        <form>
+            
+                <!--outline -->
+            <legend style="color: rgb(77, 17, 95); font-size: 50px;">Image and Table</legend></h1>
+        
+        </form>
+            
+        
+            <!--table form with styling-->
+            <table box="table-box" style= "width:80%;height: 100vh";>
+            
+                <tr>
+                    <th colspan="2" class="box-one">Sr.No/Roll No.</th>
+                    <th class="box-one">Student name </th>
+                    <th rowspan="5" class="box-one">Subjects</th>
+                    <th class="box-one"></th>
+                    <th class="box-one"> Obtained Marks</th>
+                    <th class="box-one">Pass/Fail</th>
+                    <th class="box-one">PhotoId</th>
+                </tr>
+                <tr>
+                    <td class="box-two" >1</td>
+                    <td  class="box-two">001</td>
+                    <td class="box-two">Sanket </td>
+                    <td class="box-two">English
+                        Hindi
+                        Marathi
+                    </td>
+                    <td class="box-two">73
+                        81
+                        79
+                    </td>
+                    <td class="box-two">Pass</td>
+                    <td class="box-two">photo</td>
+                <tr>
+        
+                    <td class="box-two" >2</td>
+                    <td class="box-two">002</td>
+                    <td class="box-two" >Diksha</td>
+                    <td class="box-two">English
+                        Hindi
+                        Marathi</td>
+                    <td class="box-two">45
+                        87
+                        77
+                    </td>
+                    <td class="box-two">fail</td>
+                    <td class="box-two">Photo</td>
+                </tr>
+                <tr>
+                    <td class="box-two">3</td>
+                    <td class="box-two">003</td>
+                    <td class="box-two">Samiksha</td>
+        
+                    <td class="box-two">English
+                        Hindi
+                        Marathi</td>
+                    <td class="box-two">45
+                        87
+                        77</th>
+                    <td class="box-two">pass</td>
+                    <td class="box-two">photo</td>
+                </tr>
+                <tr>
+                    <td class="box-two">4</td>
+                    <td class="box-two">004</td>
+                    <td class="box-two">Nukuk</td>
+        
+                    <td class="box-two"> English
+                        Hindi
+                        Marathi</td>
+                    <td class="box-two">45
+                        87
+                        77</td>
+                    <td class="box-two">fail</td>
+                    <td class="box-two"> photo</td>
+                </tr>
+                <tr>
+                    <td class="box-three" >total Passed</td>
+                    <td class="box-three">-</td>
+                    <td class="box-three">-</td>
+                    <td class="box-three">-</th>
+                    <td class="box-three">2</td>
+                    <td class="box-three">-</td>
+                    <td class="box-three"></td>
+                    <td class="box-three"></td>
+
+                    
+                
+    </body>
+</html>
