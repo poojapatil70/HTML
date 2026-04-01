@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+  box-sizing: border-box;
+}
+ 
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+ 
+.container {
+  width: 420px;
+  height: 260px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+ 
+/* ---------- TOP ---------- */
+.top {
+   display: flex; 
+  height: 40%;
+}
+
+ 
+.top-left,
+.top-right {
+  flex: 2; 
+}
+ 
+.top-center {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+}
+ 
+/* ---------- BOTTOM ---------- */
+.bottom {
+  display: flex;
+  height: 60%;
+}
+ 
+.bottom-left {
+  flex: 2;
+  display: flex;
+}
+ 
+.bottom-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.bottom-right {
+  flex: 2;
+}
+ 
+/* ---------- BOXES ---------- */
+.box {
+  border: 2px solid black;
+  flex: 1;
+}
+ 
+.small {
+  flex: 1;
+}
+ 
+.tall {
+  flex: 3;
+    }
+
+</style>
+
+
+<body>
+  <div class="container">
+ 
+  <!-- TOP ROW -->
+  <div class="top">
+    <div class="top-left box"></div>
+ 
+    <div class="top-center">
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+ 
+    <div class="top-right box"></div>
+  </div>
+ 
+  <!-- BOTTOM ROW -->
+  <div class="bottom">
+    <div class="bottom-left">
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+ 
+    <div class="bottom-center">
+      <div class="small box"></div>
+      <div class="tall box"></div>
+    </div>
+ 
+    <div class="bottom-right box"></div>
+  </div>
+ 
+</div>
+</body>
+
+</html>

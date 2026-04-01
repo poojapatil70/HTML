@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number = 0;
+        function add(){
+            let userInput = 20;
+            number = number  + userInput;
+            userInput = 40;
+            number = number  + userInput;
+        }
+         add()
+         add()
+         add()
+         alert(number)
+
+         let balance = 50000
+         function getAmount(){
+            let amount = Number(prompt("Enter amount to widthdraw: "))
+            alert ("Balance amount is " + Number(balance - amount))
+         }
+         getAmount()
+    </script>
+</body>
+</html>

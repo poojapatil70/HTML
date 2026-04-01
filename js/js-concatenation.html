@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string concate</title>
+</head>
+<body>
+    <p id="display"></p>
+    <input type="text" id="first-name" placeholder="Enter first name"> 
+    <input type="text" id="last-name" placeholder="Enter last name">
+    <button onclick="str()">concatenation</button>
+
+       <script>
+        function str(){
+        let str1 = document.getElementById("first-name").value;          
+        let str2 = document.getElementById("last-name").value;
+        let result = str1 + " " + str2;
+        document.getElementById("display").innerHTML = result;
+        
+        }
+       </script>
+    
+       </body>
+</html>

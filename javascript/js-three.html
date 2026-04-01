@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(222, 234, 113);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-one,
+    .input-two
+   {background-color: rgb(233, 232, 173);
+        height: 10%;
+        width: 50%;
+        border: 2px solid;
+        margin: 10px;
+    }
+
+    button {
+        background-color: rgb(84, 220, 77);
+        height: 40px;
+        width: 90%;
+    }
+
+    .display-box1 {
+        height: 20%;
+        width: 50%;
+        background-color: rgb(231, 177, 223);
+        border: 2px solid;
+        margin: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>JAVASCRIPT Classes</h1>
+        <label>Name :</label>
+            <input class="input-one" type=" text" id="input-one">
+        <label>Age :</label>
+            <input class="input-two" type="text" id="input-two">
+        <label>Email :</label>
+            <input class="input-one" type=" text" id="input-three">
+
+        <label>Gender :</label>
+           <select name="Gender" id="input-four" class="input-one"> 
+            <optgroup label="Select Gender">
+                <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            </optgroup>
+           </select>
+
+        <label>Course :</label>
+            <input class="input-one" type=" text" id="input-five">
+
+        <div class="display-box1" id="display1"></div>
+
+
+        <button class="button" onclick="myFunction()">Submit</button>
+    </div>
+
+    <script>
+
+        //function declaration
+        function myFunction() {
+            let a = document.getElementById("input-one").value;//use to give input on ui
+            let b = Number(document.getElementById("input-two").value);
+            let c = document.getElementById("input-three").value;
+            let d = document.getElementById("input-four").value;
+            let e = document.getElementById("input-five").value;
+
+            document.getElementById("display1").innerHTML = "Name : " + a + "<br>" + "Age :" + b + "<br> " + "Email : " + c + "<br> " + "Gender : " + d + "<br> " + "Course :" + e;
+            //if we use .innertext then br tag h1 tag all html tal will not run
+            document.getElementById("display1").style = "color: red; font-size: 20"
+
+            console.log(a + "\n" + b + "\n" + c + "\n" + d + "\n" + e);
+
+        }
+
+        //  calling the function
+        myFunction();
+
+    </script>
+
+</body>
+
+</html>

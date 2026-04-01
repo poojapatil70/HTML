@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<input type="text" id="input">
+<p id="display"></p>
+<p id="display1"></p>
+<p id="display2"></p>
+<button onclick="letter()">click</button>
+
+<body>
+    <script>
+        function letter() {
+            let letter = document.getElementById("input").value;
+            let num = 0;
+            let outpu = ""
+            while (num < letter.length) {
+                outpu += (letter.charAt(num)) + "<br>" ;
+                console.log(outpu)
+                num++;
+            }
+            document.getElementById("display").innerHTML = outpu
+
+
+
+            let x = letter.length;
+            let w=""
+            while( x >=0 ){
+                w += (letter.charAt(x)) + "<br>";
+                console.log(w)
+                x--;
+            }
+            document.getElementById("display1").innerHTML = w
+
+            //palindrom means a word like tat... br tag no need for palindrome in above cond br tag is necessary to print letters in one line
+
+            if(outpu == w){
+                document.getElementById("display2").innerHTML = letter + "is  a palindrome"
+
+            }
+            else{
+                 document.getElementById("display2").innerHTML = letter + "is not a palindrome"
+                 
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

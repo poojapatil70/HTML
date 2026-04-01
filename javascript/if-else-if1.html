@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ladder if else</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+  }
+
+  .container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  input {
+    padding: 8px;
+    margin: 10px 0;
+    width: 120px;
+  }
+
+  button {
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+
+  #result {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <h2>Fizz Buzz Checker</h2>
+
+  <input type="number" id="Input" placeholder="Enter number">
+  <br>
+  <button onclick="checkFizzBuzz()">Check</button>
+  <div class="button" id="result"></div>
+</div>
+
+<script>
+function checkFizzBuzz(){
+
+let x = document.getElementById("Input").value;
+
+if( x % 5 == 0){
+   document.getElementById("result").innerHTML = "Buzz";
+}
+else if(x % 3 == 0){
+   document.getElementById("result").innerHTML = "Fizz";
+}
+else if( x % 3 == 0 && x % 5 == 0) {
+  document.getElementById("result").innerHTML = "Fizz - Buzz";
+}
+else{
+    document.getElementById("result").innerHTML = "not divisible by 3 or 5"
+}
+}
+checkFizzBuzz()
+
+
+</script>   
+
+</body>
+</html>
+
+//Q number id divisible by 3 then display ="fizz" //if
+//Q number id divisible by 5 then display ="buzz" //else if
+//Q number id divisible by 3 and 5 then display ="fizz-buzz". //else if
+//Q number id divisible by 3 then display ="not divisible by 3 or 5" //else
+
+
+// if 2 condition if and else called if else// first condition will check 
+
+//if more than 2 condition then it called ladder if else //first condition will check 
+

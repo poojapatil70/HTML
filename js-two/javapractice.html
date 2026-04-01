@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: cadetblue;
+        }
+        .main-container {
+            width: 400px;
+            height: 300px;
+            background-color: blanchedalmond;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 30px;
+
+        }
+
+        .container {
+            width: 50%;
+            height: 90%;
+            background-color: blanchedalmond;
+            border-radius: 2%;
+            display: flex;
+            flex-direction: column;
+
+
+        }
+
+        .display-area {
+            width: 160%;
+            height: 205%;
+            background-color: cadetblue;
+            border: 2px solid;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        
+        .input-area {
+            width: 100%;
+            height: 20%;
+            background-color: cornflowerblue;
+            border: 2px solid;
+            display: flex;
+            flex-direction: row;
+            margin-left: 30px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .click-button {
+            width: 80px;
+            height: 70%;
+            background-color: coral;
+            border-radius: 2px solid;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5;
+            height: 2rem;
+             
+        }
+    </style>
+</head>
+
+<body>
+      <div class="main-container">
+        <div class="container">
+            <div class="display-area" id="display"></div>
+            <div class="input-area">
+                <input type="text" class="input-field" id="inputField" placeholder="type a message...">
+                <input type="text" class="input-field" id="inputField2" placeholder="type a message...">
+                </div>
+                <button id='mon'class="click-button" onclick="monday()">click</button>
+            
+        </div>
+    </div>
+
+    </body>
+    <script>
+             function monday(){
+                let y = number(document.getElementById("inputField").value)
+                let z = number(document.getElementById("inputField2").value)
+
+                document.getElementById('display').innerHTML = y % z + typeof z;
+             }             
+    </script>
+
+</html>

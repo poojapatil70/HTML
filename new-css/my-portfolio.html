@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    background-color: #222;
+    padding: 15px 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #00bcd4;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Home */
+.home {
+    height: 90vh;
+    background: linear-gradient(to right, #00bcd4, #0097a7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+.home h3 {
+    font-size: 25px;
+}
+
+/* Sections */
+.section {
+    padding: 60px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    color: #0097a7;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: #222;
+    color: white;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+/* Projects */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+</style>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <h1 class="logo">MyPortfolio</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section id="home" class="home">
+        <h2>Hello, I'm</h2>
+        <h1>Pooja Patil</h1>
+        <h3>Full Stack Developer</h3>
+        <p>I build modern and responsive web applications</p>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate Full Stack Developer who loves building
+            user-friendly websites and applications using frontend and backend technologies.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">MongoDB</div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Personal portfolio using HTML & CSS</p>
+            </div>
+            <div class="project-card">
+                <h3>Todo App</h3>
+                <p>Task management application</p>
+            </div>
+            <div class="project-card">
+                <h3>Weather App</h3>
+                <p>Shows weather using API</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <p>Email: yourname@gmail.com</p>
+        <p>GitHub: github.com/yourname</p>
+        <p>LinkedIn: linkedin.com/in/yourname</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p> 2026 Your Name | Full Stack Developer</p>
+    </footer>
+
+</body>
+</html>

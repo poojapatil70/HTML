@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Temperature</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+  }
+
+  .container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  input {
+    padding: 8px;
+    margin: 10px 0;
+    width: 120px;
+  }
+
+  button {
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+
+  #result {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <h2>Temperature</h2>
+
+  <input type="number" id="Input" placeholder="Enter number">
+  <br>
+  <button onclick="checkTemp()">Check Temperature</button>
+  <div class="button" id="result"></div>
+</div>
+
+<script>
+function checkTemp(){
+
+let t = document.getElementById("Input").value;
+
+if(t <= 0 && t <= 10){
+    document.getElementById("result").innerHTML = "Freezing";
+} 
+else if(t >= 11 && t <= 25){
+    document.getElementById("result").innerHTML = "cool";
+}
+else if(t >= 26 && t <= 32){
+    document.getElementById("result").innerHTML = "warm";
+}
+else if(t >= 33 && t <= 48){
+     document.getElementById("result").innerHTML = "hot";
+}
+else if (t >= 48){
+  document.getElementById("result").innerHTML = "extream"  ;
+}
+else{
+  document.getElementById("result").innerHTML = "Please enter valid Temperature"
+}
+}
+checkTemp();
+</script>   
+</body>
+</html>
+
+
+
+
+// temp 0-10 =>freezing
+//temp 11-25 =>color
+//temp 26-32=>warm
+//temp 33-48=>hot
+//temp 48 and above =>extream
+
+
+H.W 12 march 
+// email = test@gmail.com
+//passward = 1234
+ if  email wrong show invalid email 
+ if  password wrong show invalid password 
+
+
+
+ 
+ if both wrong thenshow invalid password and email
+ if email and password is right then show login successfully
