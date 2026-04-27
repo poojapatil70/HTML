@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social media</title>
+    <!-- BOOTSRAP LINK -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- SCRIPT LINK  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="continer-fluid vh-100 d-flex flex-column">
+      <!-- <header  -->
+      <div
+        class="d-flex justify-content-between align-items-center p-2 bg-primary text-white"
+      >
+        <h5>Mychat</h5>
+        <div class="d-flex gap-3">
+          <!-- <SEARch></SEARch> -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+            />
+          </svg>
+          <!-- menu  -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-three-dots-vertical"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
+            />
+          </svg>
+        </div>
+      </div>
+      <!-- <div class="d-flex"></div> -->
+      <!-- header end  -->
+
+      <!-- Tabs start -->
+      <ui class="nav nav-tabs bg-light">
+        <li class="nav-item">
+          <a class="nav-link active fw-bold" href="">Chats</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="">Status</a></li>
+        <li class="nav-item"><a class="nav-link" href="">Calls</a></li>
+        <li class="nav-item"><a class="nav-link" href="">Group</a></li>
+      </ui>
+      <!-- Tabs end -->
+
+      <div class="row flex-grow-1">
+        <!-- chat list  -->
+        <div class="col-4 border-end overflow-auto">
+          <!-- <Search></Search> -->
+          <div class="p-2">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search chats"
+            />
+          </div>
+
+          <!-- chat list end -->
+
+          <!-- user start  -->
+          <div class="list-group list-group-flush">
+            <!-- user 1  -->
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex justify-content-between align-items-start"
+            >
+              <div class="d-flex">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGA5sHKRAYnPHe6pfLJv-DiePlWMURNfZWug&s"
+                  class="rounded-circle me-2"
+                  height="50px"
+                />
+                <div>
+                  <div>User 1</div>
+                  <small>last msg</small>
+                </div>
+              </div>
+              <small>11:39am</small>
+            </a>
+            <!-- user end  -->
+            <!-- user 2 -->
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex justify-content-between align-items-start"
+            >
+              <div class="d-flex">
+                <img
+                  src="https://i.pinimg.com/736x/59/37/5f/59375f2046d3b594d59039e8ffbf485a.jpg"
+                  class="rounded-circle me-2"
+                  height="50px"
+                />
+                <div>
+                  <div>User 2</div>
+                  <small>last msg</small>
+                </div>
+              </div>
+              <small>11:30am</small>
+            </a>
+            <!-- user end  -->
+            <!-- user 3  -->
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex justify-content-between align-items-start bg-primary text-white"
+            >
+              <div class="d-flex">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlDl4_VIb5z2B1nrsDisDU2ceTMZWKWkn9A&s "
+                  class="rounded-circle me-2"
+                  height="50px"
+                />
+                <div>
+                  <div>User 3</div>
+                  <small>last msg</small>
+                </div>
+              </div>
+              <small>10:30am</small>
+            </a>
+            <!-- user end  -->
+          </div>
+        </div>
+
+        <!-- chat window -->
+        <div class="col-8 d-flex flex-column">
+          <!-- chart header  -->
+          <div
+            class="d-flex justify-content-between align-items-center p-2 border-bottom"
+          >
+            <div class="d-flex align-items-center">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlDl4_VIb5z2B1nrsDisDU2ceTMZWKWkn9A&s"
+                alt=""
+                class="rounded-circle me-2"
+                height="50px"
+              />
+              <div>
+                <div>User 3</div>
+                <small>Online</small>
+              </div>
+            </div>
+            <!-- --------------------------------------------- -->
+            <div class="d-flex gap-3">
+              <!-- camera icon  -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-camera-video"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1z"
+                />
+              </svg>
+              <!-- phone icon  -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-telephone"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- chat header end  -->
+          <!-- msg start  -->
+          <div class="flex-grow-1 p-3 averflow-auto">
+            <!-- icoming  -->
+            <div class="d-flex mb-2">
+              <div class="bg-light p-2 rounded">hello</div>
+            </div>
+            <!-- outcoming  -->
+            <div class="d-flex justify-content-end mb-2">
+              <div class="bg-primary text-white p-2 rounded">
+                hi,what are you doing?
+              </div>
+            </div>
+            <!-- icoming 2 -->
+            <div class="d-flex mb-2">
+              <div class="bg-light p-2 rounded">nothing and you?</div>
+            </div>
+            <!-- outcoming2  -->
+            <div class="d-flex justify-content-end mb-2">
+              <div class="bg-primary text-white p-2 rounded">same here</div>
+            </div>
+          </div>
+          <!-- msg end  -->
+
+          <!-- input aera  -->
+          <div class="p-2 border-top">
+            <div class="input-group">
+              <button class="btn btn-light">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-plus"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-emoji-smile"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+                  />
+                  <path
+                    d="M4.285 9.567a.5.5 0 0 1 .683.183A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5"
+                  />
+                </svg>
+              </button>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Type you meassge"
+              />
+              <button class="btn btn-light"></button>
+              <button class="btn bg-primary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-send"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- input end  -->
+        </div>
+        <!-- chat window end -->
+      </div>
+    </div>
+  </body>
+</html>

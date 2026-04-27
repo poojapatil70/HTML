@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 21%;
+            left: 10%;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+            <img src="https://img.freepik.com/free-vector/gradient-restaurant-logo-design_23-2151257068.jpg?semt=ais_hybrid&w=740&q=80"
+                alt="" height="60" width="60">
+            <a class="navbar-brand" href="#">Foodie</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="Restaurant-web-pg-1.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Restaurant-web-pg-2.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Restaurant-web-pg-3.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="foodCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+
+            <div class="carousel-item active ">
+                <img src="./images/img1.png" class=" w-100 h-100 ">
+                <div class="hero-text">
+                    <h2>Welcome to</h2>
+                    <h1>FOODIE RESTAURANT🍕</h1>
+                    <p>Good Food|Good Taste|Good Taste</p>
+                    <a href="Restaurant-web-pg-2.html" class="btn btn-warning">View Menu</a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="./images/img2.png" class="h-100 w-100">
+                <div class="hero-text">
+                    <h1>Delicious food</h1>
+                    <h1>MADE WITH LOVE</h1>
+                    <p>We use the freshest ingredients to make our experience unforgettable</p>
+                   
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="./images/img3.png" class=" w-100 h-100">
+                <div class="hero-text">
+                    <h1>Great Food</h1>
+                    <h1>GREAT MEMORIES</h1>
+                    <p>Enjoy a premium dinning experience with your loved ones</p>
+                    
+                </div>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#foodCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+
+    <!-- About Section -->
+    <div class="container my-5 text-center">
+        <h2>About Us</h2>
+        <p>We serve delicious food with love and quality ingredients.</p>
+    </div>
+
+    <!-- Popular Dishes -->
+    <div class="container">
+        <h2 class="text-center mb-4">Popular Dishes</h2>
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://t4.ftcdn.net/jpg/03/61/86/91/360_F_361869194_7JGmIOSj2iUNi0AYoVhVyhKvaN6PkOah.jpg"
+                        class="">
+                    <div class="card-body text-center h-100 w-100">
+                        <h5>Indian food</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/top-view-fast-food-mix-mozzarella-sticks-club-sandwich-hamburger-mushroom-pizza-caesar-shrimp-salad-french-fries-ketchup-mayo-cheese-sauces-table_141793-3998.jpg?semt=ais_hybrid&w=740&q=80"
+                        class="">
+                    <div class="card-body text-center ">
+                        <h5>Fast Food</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/homemade-dessert-tiramisu-served-in-individual-glasses.jpg?w=600&quality=80 "
+                        class="h-100 w-100px">
+
+                    <div class="card-body text-center">
+                        <h5>Desserts</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p>© 2026 Foodie Restaurant | All Rights Reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
