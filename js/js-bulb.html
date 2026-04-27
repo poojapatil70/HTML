@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb change on click</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 30%;
+            height: 80%;
+            box-shadow: 5px 5px 50px 3px rgb(153, 147, 147);
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .bulb-image{
+           width: 90%;
+           height: 70%;
+           display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: 80%;
+            height: 100%;
+           
+        }
+        .btn-grp{
+            width: 90%;
+            height: 30%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            font-size: 20px;
+        }
+        button:hover{
+            background-color: darkcyan;
+        }
+
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="bulb-image">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTFTo2MgwQWUd962ZjDrum-jhhnKIzo_Ml3wkHcfVUdVrusaZygJw9pob9cXZj8dfx9_o0BsK2dBBBAXsl0lhrCWhUOgMSpGLyq_3jaMXt8mZoBWZW1egdK" alt="" id="image">
+        </div>
+        <div class="btn-grp">
+            <button onclick="redBulb()">Red Bulb</button>
+            <button onclick="greenBulb()">Green Bulb</button>
+            <button onclick="blueBulb()">Blue Bulb</button>
+        </div>
+     </div>
+     <script>
+        function redBulb(){
+            document.getElementById("image").src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTbkZ2cbcOd7DEcPisKjB-Zu94N8uUnRkKjFWVyHcQvrnL46VWq94wtlTHh7X46gNVuQZWdP_b1K8j53t9QlB3h5L5umPSNt1gsdFmDEtmJOZ-l3Vf2vaIfmPw"
+        }
+        function greenBulb(){
+            document.getElementById("image").src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTtv3ZA21wyI2n8IdcBBoXjrDiPCM40oYjbsVMKjQyYPwaLnnzWx82WlCC3XH_rUyZhqaz22RtoZXKPUgFGtKc9BUrgKI824btUt1ahdfFyDOCRpGVTKPDW"
+        }
+        function blueBulb(){
+            document.getElementById("image").src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS1Pw-kIDq-2EOgazW05wGHaWfJqr532rui-vemu1tJILLEgZK522cy0AF7XxcISOICkBNxSzAfWIQZMgGgI-comsznNnMO2ZTiYZYXtI6fRAoRUjvP7fIx"
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .display-area {
+            width: 300px;
+            height: 200px;
+            background-color: cadetblue;
+            border: 2px solid;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+
+        .input-area {
+            width: 14%;
+            height: 60%;
+            background-color: cornflowerblue;
+            border: 2px solid;
+            display: flex;
+            flex-direction: row;
+            margin-left: 80px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><b>Admission Form - Personal Details</b></h1>
+    <label for="text">Full Name</label><br>
+    <input type="text" id="fname" required><br>
+    <label>Date of Birth :</label><br><input type="date" required id="DOB"><br><br>
+    <label for="gender">Select your Gender:</label id="gender"><br>
+    <input type="radio" name="gender" value="male">male<br>
+    <input type="radio" name="gender" value="female">Female<br>
+    <input type="radio" name="gender" value="other">Other<br><br>
+    <label for="Nationality">Nationality:</label id="Nationality"><br>
+    <input type="text" required><br><br>
+    <div class="display-area" id="display"></div><br>
+    <div class="input-area">
+        <input type="text" class="input-field" id="input-one" placeholder="type a message...">
+        <input type="text" class="input-field" id="input-two" placeholder="type a message...">
+        <input type="text" class="input-field" id="input-three" placeholder="type a message...">
+        <input type="text" class="input-field" id="input-four" placeholder="type a message...">
+        <button class="button" onclick="showOutput()">click</button>
+    </div>
+
+    </form>
+    <script>
+        //function = block of code which does a specify task
+        function showOutput() {
+
+            let Name = (document.getElementById("input-one").value);
+            let DOB= (document.getElementById("input-two").value);
+            let Nationality = (document.getElementById("input-three").value);
+            let gender= (document.getElementById("input-four").value);
+            
+
+
+            document.getElementById("display").innerHTML= Name + DOB + Nationality + gender;
+
+        }
+
+
+    </script>
+</body>
+
+</html>

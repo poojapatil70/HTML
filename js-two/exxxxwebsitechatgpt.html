@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My JavaScript Website</title>
+  <style>
+    :root{--accent:#2563eb;--bg:#0f172a;--card:#0b1220;--muted:#94a3b8}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:linear-gradient(180deg,#071029 0%, #071827 100%);color:#e6eef8;line-height:1.5}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;backdrop-filter:blur(6px)}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:46px;height:46px;background:var(--accent);display:grid;place-items:center;border-radius:10px;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin:0 10px;font-weight:600}
+    nav a:hover{color:#fff}
+    .container{max-width:1100px;margin:32px auto;padding:0 18px}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 10px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .cta{display:inline-block;background:var(--accent);color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
+
+    /* cards */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+    .card{background:rgba(255,255,255,0.03);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .muted{color:var(--muted);font-size:0.95rem}
+
+    /* gallery */
+    .gallery{display:flex;gap:12px;margin-top:12px}
+    .thumb{flex:1;min-height:110px;border-radius:10px;background:linear-gradient(120deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));display:grid;place-items:center;color:var(--muted);font-weight:700}
+
+    /* contact */
+    form{display:grid;gap:10px}
+    label{font-size:0.9rem;color:var(--muted)}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    button[type=submit]{padding:10px;border-radius:8px;border:0;background:var(--accent);color:#fff;font-weight:700}
+
+    footer{color:var(--muted);text-align:center;padding:28px 8px}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    /* subtle animations */
+    .fade-in{opacity:0;transform:translateY(8px);animation:fade .6s forwards}
+    @keyframes fade{to{opacity:1;transform:none}}
+
+    /* small utility */
+    .right{display:flex;gap:10px;align-items:center}
+    .chip{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-weight:700}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">JS</div>
+      <div>
+        <div style="font-weight:800">YourSite</div>
+        <div class="muted" style="font-size:12px">A simple JavaScript site</div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="right">
+      <div class="chip" id="time"></div>
+      <button id="themeBtn" class="chip" aria-label="Toggle theme">Toggle</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div class="fade-in">
+        <h1>Build fast, interactive websites with plain JavaScript</h1>
+        <p class="muted">This single-file template shows a responsive layout with small interactive components — theme toggle, form validation, image carousel, and simple navigation. Edit and expand!</p>
+        <a class="cta" href="#contact">Get in touch</a>
+
+        <div class="grid" style="margin-top:20px">
+          <div class="card">
+            <h3>Responsive UI</h3>
+            <p class="muted">Works on mobile, tablet and desktop automatically.</p>
+          </div>
+          <div class="card">
+            <h3>Vanilla JS</h3>
+            <p class="muted">No frameworks required — easy to learn and modify.</p>
+          </div>
+          <div class="card">
+            <h3>Customizable</h3>
+            <p class="muted">Colors, layout and content are all editable in one file.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card fade-in">
+        <h3 style="margin-top:0">Live demo</h3>
+        <p class="muted">Click the images below to open the carousel, or submit the contact form to see validation in action.</p>
+        <div class="gallery" id="galleryPreview">
+          <div class="thumb" data-img="1">Image 1</div>
+          <div class="thumb" data-img="2">Image 2</div>
+          <div class="thumb" data-img="3">Image 3</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="features" style="margin-top:26px">
+      <h2>Features</h2>
+      <div class="grid">
+        <div class="card">
+          <h4>Navigation</h4>
+          <p class="muted">Smooth-scrolling anchors and a compact header.</p>
+        </div>
+        <div class="card">
+          <h4>Form</h4>
+          <p class="muted">Client-side validation with friendly messages.</p>
+        </div>
+        <div class="card">
+          <h4>Carousel</h4>
+          <p class="muted">Simple JS-powered image viewer/modal.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" style="margin-top:26px">
+      <h2>Gallery (click a tile)</h2>
+      <div class="grid" id="galleryGrid">
+        <div class="card" data-img="1">Large Image 1</div>
+        <div class="card" data-img="2">Large Image 2</div>
+        <div class="card" data-img="3">Large Image 3</div>
+        <div class="card" data-img="4">Large Image 4</div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:26px">
+      <h2>Contact</h2>
+      <div class="card">
+        <form id="contactForm">
+          <label for="name">Name</label>
+          <input id="name" name="name" required placeholder="Your name">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required placeholder="How can we help?"></textarea>
+
+          <div style="display:flex;gap:10px;align-items:center">
+            <button type="submit">Send message</button>
+            <div id="formStatus" class="muted"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal for image viewer -->
+  <div id="modal" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.75);z-index:60">
+    <div style="max-width:900px;width:90%;background:linear-gradient(180deg,#071827,#071029);padding:18px;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.6);position:relative">
+      <button id="closeModal" style="position:absolute;right:12px;top:12px;border:0;background:transparent;color:var(--muted);font-weight:700">Close</button>
+      <div id="modalContent" style="min-height:260px;display:grid;place-items:center;color:var(--muted);font-weight:800;font-size:20px"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="muted">Made with vanilla JavaScript • Edit this file and save as <code>index.html</code></div>
+  </footer>
+
+  <script>
+    // show local time in header
+    function updateTime(){
+      const el=document.getElementById('time');
+      const now=new Date();
+      el.textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateTime,1000);
+    updateTime();
+
+    // theme toggle (light/dark simple example)
+    const themeBtn=document.getElementById('themeBtn');
+    themeBtn.addEventListener('click',()=>{
+      if(document.documentElement.style.getPropertyValue('--bg')===''){
+        // simple toggle: invert background & accent
+        document.body.style.background='linear-gradient(180deg,#f8fafc,#e6eef8)';
+        document.body.style.color='#061124';
+        themeBtn.textContent='Toggle';
+      } else {
+        document.body.style.background='linear-gradient(180deg,#071029,#071827)';
+        document.body.style.color='';
+        themeBtn.textContent='Toggle';
+      }
+    });
+
+    // smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        const id=a.getAttribute('href').slice(1);
+        const target=document.getElementById(id);
+        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+
+    // gallery / modal
+    function openModal(text){
+      const modal=document.getElementById('modal');
+      document.getElementById('modalContent').textContent=text;
+      modal.style.display='flex';
+    }
+    document.getElementById('closeModal').addEventListener('click',()=>{
+      document.getElementById('modal').style.display='none';
+    });
+    document.querySelectorAll('[data-img]').forEach(el=>{
+      el.style.cursor='pointer';
+      el.addEventListener('click',()=>openModal('Viewing: '+el.getAttribute('data-img')));
+    });
+
+    // simple contact form validation and fake submit
+    const form=document.getElementById('contactForm');
+    const status=document.getElementById('formStatus');
+    form.addEventListener('submit',e=>{
+      e.preventDefault();
+      status.textContent='Validating...';
+      const name=form.name.value.trim();
+      const email=form.email.value.trim();
+      const msg=form.message.value.trim();
+      if(name.length<2){ status.textContent='Please enter your name'; return; }
+      if(!email.includes('@')){ status.textContent='Please enter a valid email'; return; }
+      if(msg.length<6){ status.textContent='Message too short'; return; }
+      status.textContent='Sending...';
+      // simulate network
+      setTimeout(()=>{
+        status.textContent='Message sent — thank you!';
+        form.reset();
+      },900);
+    });
+
+    // make cards fade in
+    document.querySelectorAll('.fade-in').forEach((el,i)=>{ el.style.animationDelay=(i*100)+'ms'; });
+  </script>
+</body>
+</html>
