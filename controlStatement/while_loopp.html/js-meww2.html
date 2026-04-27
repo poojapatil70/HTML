@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function squarePattern(){
+            let i = 1;
+            let n = 4;
+            while(i<= n){
+                let row = ""
+                let j = 1;
+                while(j<= n){
+                    row+= "*";
+                    j++;
+
+                }
+                console.log(row);
+                 console.log(" ");
+                i++;
+         
+         
+         
+            }
+        }
+
+        function reverseTriangle(){
+            let i = 4;
+            let n = 1;
+            while(i>=n){
+                let j = i;
+                let row = ""
+                while(j>=i){
+                    row+= '*';
+                    j--;
+                }
+                console.log(row);
+                 console.log(" ");
+                i--;
+            }
+        }
+
+        function trianglePattern(){
+            let i = 1;
+            let n = 4;
+            while(i<=n){
+                let j = 1;
+                let row = "";
+                while(j<=n){
+                    row+= '*                        ';
+                    j++;
+                }
+                console.log(row);
+                console.log(" ")
+                i++;
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

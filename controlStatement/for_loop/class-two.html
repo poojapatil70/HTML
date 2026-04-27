@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star diamond</title>
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        let i = 1;
+        let n = 7;
+        let row = "";
+        while (i <= n) {
+            let row = "";
+            let j = 1;
+            while (j <= n - i) {
+                row += " ";
+                j++;
+            }
+            let k = 1;
+            while (k <= i -1) {
+                row += " *";
+                k++;
+            }
+            
+            
+
+            console.log(row)
+            document.getElementById("display").innerHTML += row + "<br/>";
+            i++;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

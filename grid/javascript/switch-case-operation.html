@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch case</title>
+</head>
+
+<body>
+    <input type="text" id="input-one">
+    <p id="display"></p>
+    <button onclick="checkSignal()"> click</button>
+
+</body>
+<script>
+    function checkSignal() {
+        let n1 = Number (document.getElementById("input-one").value);
+        let n2 = 50;
+        switch (n1 + n2) {
+            case 100:
+                document.getElementById("display").innerHTML = "n1 = " + 50;
+                 break;
+                 
+            case 150:
+                document.getElementById("display").innerHTML = "n1 = " + 100;
+                 break;
+
+            case 200:
+                document.getElementById("display").innerHTML = "n1 = " + 150;
+
+                break;
+            default:
+                document.getElementById("display").innerHTML = Invalid
+        }
+    }
+</script>
+
+</html>
+hw// even odd
+    frizz buzz
+    eligibility
+    calculator

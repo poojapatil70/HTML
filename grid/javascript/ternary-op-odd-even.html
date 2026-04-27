@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>even odd</title>
+</head>
+<input type="text" id="input-one">
+<button onclick="CheckNum()">click </button>
+<p id="display"></p>
+
+<body>
+
+    <script>
+        function CheckNum() {
+            let num = document.getElementById("input-one").value;
+            let oddEven = (num %= 2) ? "odd number" : "even number";
+            document.getElementById("display").innerHTML = oddEven
+
+        }
+    </script>
+</body>
+</html>

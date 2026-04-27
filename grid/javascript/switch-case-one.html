@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch case</title>
+</head>
+
+<body>
+    <input type="text" id="input-one">
+    <p id="display"></p>
+    <button onclick="checkSignal()"> click</button>
+
+</body>
+<script>
+    function checkSignal() {
+        let signal = document.getElementById("input-one").value;
+        switch (signal) {
+            case "red":
+                document.getElementById("display").innerHTML = "stop"
+                 break;
+                 
+            case "green":
+                document.getElementById("display").innerHTML = "go"
+                 break;
+
+            case "yellow":
+                document.getElementById("display").innerHTML = "ready"
+
+                break;
+            default:
+                document.getElementById("display").innerHTML = Invalid
+
+
+
+
+        }
+    }
+</script>
+
+</html>
